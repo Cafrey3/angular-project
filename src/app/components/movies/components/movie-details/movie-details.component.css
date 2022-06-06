@@ -1,16 +1,16 @@
-/*.movie_details {*/
-/*  display: flex;*/
-/*  !*margin-bottom: 20px;*!*/
-/*}*/
+.movie_details {
+  display: flex;
+  margin-bottom: 20px;
+}
 
-/*.movie_info {*/
-/*  display: flex;*/
-/*  flex-direction: column;*/
-/*  row-gap: 10px;*/
-/*  !*margin-left: 10px;*!*/
-/*  font-family: sans-serif;*/
-/*}*/
+.movie_info {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  margin-left: 10px;
+  font-family: sans-serif;
+}
 
-/*h1 {*/
-/*  !*font-size: 50px;*!*/
-/*}*/
+h1 {
+  font-size: 50px;
+}

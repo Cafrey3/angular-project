@@ -1,19 +1,27 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import {HeaderComponent} from "../header/header.component";
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
+
 import {MoviesComponent} from "./components/movies/movies.component";
+import {MoviesResolver} from "./services/movies.resolver";
+import {MovieDetailsComponent} from "./components/movie-details/movie-details.component";
+import {MoviesDetailsResolver} from "./services/movies-details.resolver";
 
 const routes: Routes = [
-  {path:'',component:MoviesComponent,
-  resolve:{}
+  {
+    path: '', component: MoviesComponent,
+    resolve: {moviesData: MoviesResolver},
+    children: [
+      {
+        path: ':id', component: MovieDetailsComponent,
+        resolve: {movieData: MoviesDetailsResolver}
+      }
+    ]
   }
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  declarations: [
-    HeaderComponent
-  ],
-  exports: [RouterModule, HeaderComponent]
+  exports: [RouterModule]
 })
-export class MoviesRoutingModule { }
+export class MoviesRoutingModule {
+}

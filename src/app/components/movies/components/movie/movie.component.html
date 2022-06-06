@@ -1,1 +1,15 @@
-<p>movie works!</p>
+<div *ngIf="movie">
+  <a routerLink="{{movie.id}}" [state]="{data:movie}">
+    <div class="movie_card">
+      <div class='poster'>
+        <img src="https://image.tmdb.org/t/p/w300/{{movie.poster_path}}" alt="{{movie.original_title}}">
+      </div>
+      <h1>{{movie.original_title}}</h1>
+      <h3>{{movie.genres?.name}}</h3>
+      <p>{{movie.overview}}</p>
+      <p><b>Release date:</b> {{movie.release_date}}</p>
+      <p><b>Rating:</b> {{movie.vote_average}} (total votes: {{movie.vote_count}})</p>
+    </div>
+  </a>
+</div>
+

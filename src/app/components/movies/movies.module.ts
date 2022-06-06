@@ -1,23 +1,32 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {HttpClientModule} from "@angular/common/http";
 
-import { MoviesRoutingModule } from './movies-routing.module';
-import { MoviesComponentComponent } from './movies-component/movies-component.component';
-import { MoviesComponent } from './components/movies/movies.component';
-import { MovieComponent } from './components/movie/movie.component';
-import { MovieDetailsComponent } from './components/movie/movie-details/movie-details.component';
+import {MoviesComponent} from './components/movies/movies.component';
+import {MovieComponent} from './components/movie/movie.component';
+import {MovieDetailsComponent} from "./components/movie-details/movie-details.component";
+import {MoviesService} from "./services/movies.service";
+import {MoviesResolver} from "./services/movies.resolver";
+import {MoviesRoutingModule} from './movies-routing.module';
+import {MoviesDetailsResolver} from "./services/movies-details.resolver";
 
 
 @NgModule({
   declarations: [
-    MoviesComponentComponent,
     MoviesComponent,
     MovieComponent,
-    MovieDetailsComponent
+    MovieDetailsComponent,
   ],
   imports: [
     CommonModule,
-    MoviesRoutingModule
+    MoviesRoutingModule,
+    HttpClientModule,
+  ],
+  providers: [
+    MoviesResolver,
+    MoviesService,
+    MoviesDetailsResolver
   ]
 })
-export class MoviesModule { }
+export class MoviesModule {
+}

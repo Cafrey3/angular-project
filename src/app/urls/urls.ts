@@ -1,12 +1,11 @@
-import {environment} from '../../environments/environment';
+const baseUrl = 'https://api.themoviedb.org/3'
 
-const {API} = environment;
+export default baseUrl;
 
-export const key = '6d318e199717546d317f5943b08508c2'
-
-
-export const urls = {
-  movies: `${API}/discover/movie${key}`,
-  movie:`${API}/movie`,
-  genres:`${API}/genre/movie/list${key}`
+export const api = {
+  genres: '/genre/movie/list?api_key=6d318e199717546d317f5943b08508c2',
+  movies: '/discover/movie/?api_key=6d318e199717546d317f5943b08508c2',
+  moviesDetails: '/movie',
 }
+
+export const key = '?api_key=6d318e199717546d317f5943b08508c2'

@@ -1,0 +1,27 @@
+.movie_card {
+  width: 320px;
+  height: 835px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  font-family: sans-serif;
+  padding: 10px;
+  color: black;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.movie_card:hover {
+  cursor: pointer;
+  box-shadow: 0 3px 3px 3px lightgray;
+  transform: scale(1.03);
+  transition: .4s;
+}
+
+

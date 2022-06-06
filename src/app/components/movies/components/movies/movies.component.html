@@ -1,1 +1,5 @@
-<app-movie *ngFor="let m of movies" [movie]="m"></app-movie>
+<div class="list">
+  <router-outlet></router-outlet>
+  <app-movie *ngFor="let movie of movies" [movie]="movie"></app-movie>
+</div>
+

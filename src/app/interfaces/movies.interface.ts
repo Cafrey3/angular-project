@@ -1,10 +1,8 @@
-import {MoviesGenresInterface} from "./movies-genres.interface";
-
 export interface MoviesInterface {
   id: number;
   original_title: string;
   overview: string;
-  genres: MoviesGenresInterface;
+  // genres: ;
   // genre_ids: [id: number];
   release_date: string;
   vote_average: string;

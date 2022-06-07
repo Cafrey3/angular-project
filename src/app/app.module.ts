@@ -3,8 +3,6 @@ import {BrowserModule} from '@angular/platform-browser';
 
 import {AppComponent} from './app.component';
 import {MenuComponent} from './components/header/menu/menu.component';
-import {MoviesRoutingModule} from "./components/movies/movies-routing.module";
-import {GenresRoutingModule} from "./components/genres/genres-routing.module";
 import {AppRoutingModule} from "./app-routing.module";
 
 @NgModule({
@@ -14,7 +12,6 @@ import {AppRoutingModule} from "./app-routing.module";
   ],
   imports: [
     BrowserModule,
-    // GenresRoutingModule,
     AppRoutingModule
   ],
   providers: [],
